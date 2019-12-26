@@ -1,6 +1,18 @@
 certbot DNS webservice
 ======================
 
+Installation
+------------
+
+Clone the repository to a local directory, e.g. `/opt/certbot-dns-webservice`.
+```
+cd /opt/certbot-dns-webservice
+pip install .
+```
+
+Usage
+-----
+
 Example call
 
 ```
