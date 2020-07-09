@@ -1,5 +1,4 @@
 # certbot DNS webservice
-======================
 
 An authentication plugin for certbot which allows DNS modification through a DynDNS 2 like interface. See [[1](#references)] for an example web service.
 
