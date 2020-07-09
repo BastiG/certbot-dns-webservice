@@ -36,13 +36,13 @@ class Authenticator(dns_common.DNSAuthenticator):
         return 'This plugin uses a webservice interface to DNS update to respond to a dns-01 challenge.'
 
     def _perform(self, domain, validation_name, validation):
-        url = self.conf('url') + '?domain={}&txt={}'.format(validation_name, validation)
+        url = self.conf('url') + '?hostname={}&txt={}'.format(validation_name, validation)
         username, password = self.conf('credentials').split(':')
 
         requests_get(url, auth=(username, password))
 
     def _cleanup(self, domain, validation_name, validation):
-        url = self.conf('url') + '?domain={}&txt='.format(validation_name)
+        url = self.conf('url') + '?hostname={}&txt='.format(validation_name)
         username, password = self.conf('credentials').split(':')
 
         requests_get(url, auth=(username, password))
